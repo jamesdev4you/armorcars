@@ -61,11 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const drawerWidth = 240;
-const navItems = [
-  { text: 'Home', href: '/' },
-  { text: 'My Bets', href: '/mybets' },
-  { text: 'Dashboard', href: '/dashboard' },
-];
+const navItems = [{ text: 'Home', href: '/' }];
 
 export default function NavBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -119,12 +115,12 @@ export default function NavBar(props) {
       <AppBar
         component='nav'
         sx={{
-          backgroundColor: '#00499B',
+          backgroundColor: 'black',
         }}
       >
         <Toolbar
           sx={{
-            backgroundColor: '#00499B',
+            backgroundColor: 'black',
             marginLeft: { xl: '14.4em', lg: '5em', md: '0em' },
             marginRight: { xl: '14.4em', lg: '5em', md: '0em' },
           }}
