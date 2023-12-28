@@ -17,9 +17,6 @@ import '../../navlink.css';
 import '../../index.css';
 import { Outlet } from 'react-router-dom';
 import { styled, alpha } from '@mui/material/styles';
-import { MyJoinButton } from '../../styledComponents';
-import { MyLoginButton } from '../../styledComponents';
-import { Typography } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -94,14 +91,6 @@ export default function NavBar(props) {
           width: '100%',
         }}
       >
-
-
-      
-          
-<Box sx={{marginTop: '10px', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '5px'}}> 
-        <MyJoinButton />
-        <MyLoginButton />
-        </Box>
         {navItems.map((item) => (
           <ListItem key={item.text} sx={{ color: 'white' }} disablePadding>
             <NavLink
@@ -120,9 +109,7 @@ export default function NavBar(props) {
             </NavLink>
           </ListItem>
         ))}
-        
       </List>
-      
     </Box>
   );
 
@@ -207,8 +194,6 @@ export default function NavBar(props) {
                 inputProps={{ 'aria-label': 'search' }}
               />
             </Search>
-            <MyLoginButton />
-            <MyJoinButton />
           </Box>
         </Toolbar>
       </AppBar>
